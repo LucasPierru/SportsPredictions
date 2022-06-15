@@ -21,15 +21,20 @@
     background-color: #202020;
 }
 
+.link.active:hover {
+    color: #d6d6d6;
+    background-color: #616161;
+}
+
 .link-container {
     display: flex;
     justify-content: center;
 }
 
 .link-icon {
-    width: 1.5em;
-    height: 1.5em;
-    margin-left: 25px;    
+    width: 1em;
+    height: 1em;
+    margin-left: 30px;    
     cursor: pointer;
     user-select: none;
 }
