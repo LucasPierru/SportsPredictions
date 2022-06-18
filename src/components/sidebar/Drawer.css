@@ -1,0 +1,8 @@
+.container {
+    display:flex;
+    flex-direction: column;
+    width: 200px;
+    height: 92vh;
+    background-color: #F10000;
+    transition: width 0.4s ease-in;
+}
