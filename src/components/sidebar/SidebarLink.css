@@ -1,29 +1,36 @@
-.container {
-    display: flex;
-    flex-direction: row;
-}
-
 .link {
     display: flex;
+    color: #e1e9fc;
     align-items: center;
+    padding: 10px;
+    list-style: none;
+    height: 50px;
     text-decoration: none;
-    color: #d6d6d6;
-    font-size: 3vh;
-    background-color: #010000;
-    width: 200px;
-    padding: 10px 0;
-    height: 30px;
-    transition: width 0.4s ease-in;
+    font-size: 18px;
 }
 
 .link.active {
     color: #f4f4f4;
     background-color: #404040;
+    border-left: 4px solid #632ce4;
+    cursor: pointer;
+    width: 176px;
+    transition: width 0.4s ease-in 0.4s;
+}
+
+.link.close {
+    width: 66px;
+    transition: width 0.4s ease-in 0.4s;
+}
+
+.link.active.close {
+    opacity: 1;
 }
 
 .link:hover {
-    color: #d6d6d6;
-    background-color: #202020;
+    background: #252831;
+    border-left: 4px solid #632ce4;
+    cursor: pointer;
 }
 
 .link.active:hover {
@@ -31,54 +38,52 @@
     background-color: #616161;
 }
 
-.link-container {
+.dropDown-link {
+    background: #414757;
+    height: 40px;
+    width: calc(200px - 2rem);
+    padding-left: 2rem;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    text-decoration: none;
+    color: #f5f5f5;
+    font-size: 18px;
+    transition: height 0.4s ease-in, width 0.4s ease-in 0.4s;
 }
 
-.drawer-container {
-    position: fixed;
-    left: 200px;
-    top: 8vh;
-    height: 92vh;
-    margin-bottom: 50px;
-    background-color: #343434;
+.dropDown-link.close {
+    height: 40px;
+    width: calc(90px - 2rem);
+    transition: height 0.4s ease-in, width 0.4s ease-in 0.4s;
 }
 
-.drawer-container.close {
-    left: 90px;
-    width: 0px
+.dropDown-link:hover {
+    background: #632ce4;
+    cursor: pointer;
 }
 
 .link-icon {
-    width: 1em;
-    height: 1em;
-    margin-left: 30px;    
+    margin-left: 25px;    
     cursor: pointer;
     user-select: none;
-}
-
-.link.close {
-    //width: 1.5em;
-}
-
-.link-active.close {
-    //width: 1.5em;
     opacity: 1;
+    transition: opacity 1s ease-in 0.2s;
+}
+
+.link-icon.close { 
+    opacity: 0;
+    transition: opacity 0.3s;
 }
 
 .link-text {
     opacity: 1;
-    transition: opacity 0.4s;
-    transition-delay: 0.2s;
+    transition: opacity 0.3s;
+    transition-delay: 0.7s;
     margin: 0 0 0 25px;
 }
 
 .link-text.close {
-    opacity: 0;
-    transition: opacity 0.4s;
-}
-
-span {
-    white-space: nowrap;
+    //opacity: 0;
+    //transition: opacity 0.4s;
 }
