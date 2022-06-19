@@ -8,10 +8,10 @@
 .page {
   display: flex;
   flex-direction: row;
-  top:0;
+  //top:0;
 }
 
 .content {
   padding: 40px 60px;
-  margin-left: 200px
+  //margin: auto;
 }

@@ -8,7 +8,7 @@ const menuItems = [
     },
     { 
         title: "Sports", 
-        route:"/sports", 
+        route:"#", 
         icon: faRunning, 
         subItem: [
             {
