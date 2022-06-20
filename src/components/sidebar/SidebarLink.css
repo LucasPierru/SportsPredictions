@@ -2,7 +2,7 @@
     display: flex;
     color: #e1e9fc;
     align-items: center;
-    padding: 10px;
+    padding: 0.5rem;
     list-style: none;
     height: 50px;
     text-decoration: none;
@@ -12,14 +12,14 @@
 .link.active {
     color: #f4f4f4;
     background-color: #404040;
-    border-left: 4px solid #632ce4;
+    border-left: 0.2rem solid #632ce4;
     cursor: pointer;
-    width: 176px;
+    width: 10.8rem;
     transition: width 0.4s ease-in 0.4s;
 }
 
 .link.close {
-    width: 66px;
+    width: 3.8rem;
     transition: width 0.4s ease-in 0.4s;
 }
 
@@ -29,7 +29,7 @@
 
 .link:hover {
     background: #252831;
-    border-left: 4px solid #632ce4;
+    border-left: 0.2rem solid #632ce4;
     cursor: pointer;
 }
 
@@ -41,8 +41,8 @@
 .dropDown-link {
     background: #414757;
     height: 40px;
-    width: calc(200px - 2rem);
-    padding-left: 2rem;
+    width: 80%;
+    padding: 0 10%;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -50,7 +50,7 @@
     text-decoration: none;
     color: #f5f5f5;
     font-size: 18px;
-    transition: height 0.4s ease-in, width 0.4s ease-in 0.4s;
+    transition: height 0.4s ease-in, width 0s ease-in 0.4s;
 }
 
 .dropDown-link.active {
@@ -59,7 +59,7 @@
 
 .dropDown-link.close {
     height: 0px;
-    width: calc(90px - 2rem);
+    width: calc(5rem - 20%);
     transition: height 0.4s ease-in, width 0.4s ease-in 0.4s;
 }
 
@@ -73,26 +73,26 @@
     cursor: pointer;
     user-select: none;
     opacity: 1;
-    transition: opacity 1s ease-in 0.2s;
+    transition: opacity 0.4s ease-in 0.6s;
 }
 
 .link-icon.close { 
     opacity: 0;
-    transition: opacity 0.3s;
+    transition: opacity 0.4s;
 }
 
 .link-text {
     opacity: 1;
-    transition: opacity 0.3s;
-    transition-delay: 0.7s;
-    margin: 0 0 0 25px;
+    transition: opacity 0.4s;
+    transition-delay: 0.6s;
+    margin: 0 0 0 1rem;
 }
 
 .subLink-text {
     opacity: 1;
-    transition: opacity 0.3s;
-    transition-delay: 0.7s;
-    margin: 0 0px 0 25px;
+    transition: opacity 0.4s;
+    transition-delay: 0.6s;
+    margin: 0 4rem 0 1rem;
 }
 
 .link-text.close {
@@ -102,7 +102,7 @@
 
 .subLink-text.close {
     opacity: 0;
-    transition: opacity 0.2s;
+    transition: opacity 0.4s;
 }
 
 #dropSpan {

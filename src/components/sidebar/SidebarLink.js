@@ -4,7 +4,7 @@ import './SidebarLink.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleDown, faAngleUp } from "@fortawesome/free-solid-svg-icons";
 
-function SidebarLink({ isOpen, route, routeName, icon, subItem }) {
+function SidebarLink({ isOpen, openSidebar, route, routeName, icon, subItem }) {
     const name = routeName
     const linkActiveClass = isOpen ?"link active" : "link active close" 
     const linkClass = isOpen ? "link" : "link close" 
@@ -16,10 +16,18 @@ function SidebarLink({ isOpen, route, routeName, icon, subItem }) {
     const dropDownClass = isOpen ? "dropDown-link" : "dropDown-link close"
     const [isDropdownOpen, setDropdownOpen] = useState(false);
     const showDropdown = () => setDropdownOpen(!isDropdownOpen);
-
+    const showSidebar = () => {
+        if(!isOpen) {
+            openSidebar(true);
+            setDropdownOpen(true);
+            console.log('open')
+        } else {
+            showDropdown();
+        }
+    }
     return(
         <div>
-            <NavLink className={({ isActive }) => isActive && !subItem ? linkActiveClass : linkClass} to={route} onClick={subItem && showDropdown}>
+            <NavLink className={({ isActive }) => isActive && !subItem ? linkActiveClass : linkClass} to={route} onClick={subItem && showSidebar}>
                 <FontAwesomeIcon width='18px' height='18px' className={linkIconClass} icon={icon}/> 
                 <span className={linkTextClass}>{name}</span>
                 <div className={linkArrowClass}>
@@ -35,7 +43,7 @@ function SidebarLink({ isOpen, route, routeName, icon, subItem }) {
                         <NavLink 
                             className={({ isActive }) => isActive ? dropDownActiveClass : dropDownClass} 
                             to={item.route} 
-                            /*onClick={() => setDropdownOpen(false)}*/
+                            key={item.title}
                         >
                             <FontAwesomeIcon 
                                 className={linkArrowClass} 

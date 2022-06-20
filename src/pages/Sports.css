@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.filterBar {
+    display: flex;
+    flex-direction: row;
+}
+
+.filter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    background-color: #FFFFFF;
+    border: 1px solid;
+    border-radius: 1em;
+    padding: 0.3em 0.7em;
+    margin: 0 0.3em 1em 0.3em;
+    font-size: 16px;
+    color: #888888
+}
+
+.filter:hover {
+    background-color: #888888;
+    color: #000000
+}

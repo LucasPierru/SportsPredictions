@@ -1,0 +1,22 @@
+.stats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0em;
+}
+
+h1 {
+    margin: 0;
+    font-size: 100%;
+}
+
+h2 {
+    margin: 0;
+    font-size: 75%;
+}
+
+img {
+    width: 25%;
+    height: 25%;
+}

@@ -16,7 +16,8 @@ function Sidebar() {
                         return (
                             <li key={index}>
                                 <SidebarLink 
-                                    isOpen={isOpen} 
+                                    isOpen={isOpen}
+                                    openSidebar={setIsOpen} 
                                     icon={item.icon} 
                                     route={item.route} 
                                     routeName={item.title} 
