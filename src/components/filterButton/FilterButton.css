@@ -1,0 +1,29 @@
+.filter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    background-color: var(--results-color);
+    border: 1px solid var(--sidebar-color);
+    border-radius: 1em;
+    padding: 0.3em 0.7em;
+    margin: 0 0.3em 1em 0.3em;
+    font-size: 16px;
+    color: var(--sidebar-color);
+    transition: 0.3s;
+}
+
+.filter.active {
+    background-color: var(--sidebar-color);
+    border-color: var(--sidebar-hover-color);
+    color: var(--sidebar-hover-color);
+    transition: 0.3s; 
+}
+
+.filter:hover {
+    background-color: var(--sidebar-color);
+    border-color: var(--sidebar-hover-color);
+    color: var(--sidebar-hover-color);
+    transition: 0.3s;
+    cursor: pointer
+}

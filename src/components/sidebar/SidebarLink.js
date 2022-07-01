@@ -9,7 +9,7 @@ function SidebarLink({ isOpen, openSidebar, route, routeName, icon, subItem }) {
     const linkActiveClass = isOpen ?"link active" : "link active close" 
     const linkClass = isOpen ? "link" : "link close" 
     const linkIconClass = "link-icon"
-    const linkArrowClass = isOpen ? "link-icon" : "link-icon close"
+    const linkArrowClass = isOpen ? "link-icon arrow" : "link-icon arrow close"
     const linkTextClass = isOpen ? "link-text" : "link-text close" 
     const subLinkTextClass = isOpen ? "subLink-text" : "subLink-text close" 
     const dropDownActiveClass = isOpen ? "dropDown-link active" : "dropDown-link active close"

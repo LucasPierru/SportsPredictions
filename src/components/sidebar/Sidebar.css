@@ -1,15 +1,22 @@
 .sidebar {
-    position: fixed;
-    top: 4rem; /* Stay at the top */
-    left: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 12rem;
-    height: 100%;
-    background-color: #010000;
-    transition: width 0.4s ease-in 0.4s;
+    min-width: 200px;
+    height: 100vh;
+    background-color: var(--sidebar-color);
+    transition: width 0.4s min-width 0.4s ease-in 0.4s;
     z-index: 1; /* Stay on top */
+}
+
+@media screen and (max-width: 700px) {
+    .sidebar {
+        min-width: 50px;
+        transition: 0s;
+    }
+    .icon {
+        opacity: 0
+    }
 }
 
 .collapse-container {
@@ -22,10 +29,12 @@
     background: transparent;
     width: 3em;
     height: 3em;
+    border: 0
 }
 
 .close {
-    width: 5rem;
+    min-width: 80px;
+    width: 80px;
 }
 
 .icon {

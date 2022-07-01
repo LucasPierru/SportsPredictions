@@ -1,5 +1,6 @@
 import React from 'react';
 import TeamData from './TeamData';
+import GameData from './GameData';
 import './Results.css';
 
 const gameData = {
@@ -11,11 +12,7 @@ function Results({game}) {
     return (
         <div className='results'>
             <TeamData team={game[0]}/>
-            <div className='gameData'>
-                <h1>@</h1>
-                <h1>{gameData.scoreA} - {gameData.scoreB}</h1>
-                <h3>{gameData.gameTime}</h3>
-            </div>
+            <GameData gameData={gameData}/>
             <TeamData team={game[1]}/>
         </div>         
     )

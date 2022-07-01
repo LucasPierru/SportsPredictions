@@ -1,0 +1,29 @@
+.gameDataContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.gameData {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+    margin: 0 1em;
+    height: 100%;
+    background-color: var(--sidebar-hover-color)
+}
+
+@media screen and (max-width: 700px) {
+    h1 {
+        margin: 0;
+        font-size: 40%;
+    }
+    
+    p {
+        margin: 0;
+        font-size: 70%;
+    }
+}
