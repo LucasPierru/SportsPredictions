@@ -82,6 +82,7 @@ function Sports({sport}) {
         if (leagueFilter.length === 0) return leagues[sport]
         else return leagueFilter.includes(league)
     })
+
     return(
         <div className='container'>
             <div className='filterBar'>
@@ -97,8 +98,7 @@ function Sports({sport}) {
                     })}    
             </div> 
             <div className='statsAndResults'>
-                <div className='resultsContainer'>
-                    
+                <div className='resultsContainer'> 
                     {
                         filteredData.map((item, index) => {
                             return(
@@ -106,8 +106,8 @@ function Sports({sport}) {
                             );
                         })
                     }
-                </div> 
-                <LeagueStats league={filteredLeagues}/>    
+                </div>
+                <LeagueStats league={filteredLeagues} leagueFilter={leagueFilter}/>    
             </div>      
         </div>  
     );

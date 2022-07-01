@@ -1,8 +1,12 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import './LeagueStats.css'
 
-function LeagueStats({league}) {
+function LeagueStats({league, leagueFilter}) {
     const [leagueIndex, setLeagueIndex] = useState(0);
+
+    useEffect(() => {
+        setLeagueIndex(0);
+    }, [leagueFilter])
 
     const leftClick = () => {
         if(leagueIndex === 0) setLeagueIndex(league.length-1)
